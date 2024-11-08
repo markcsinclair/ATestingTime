@@ -8,15 +8,17 @@ using namespace std;
 
 class OutputStrategy {
   public:
-    virtual string output(vector<string> tokens) = 0;
+    void append(string token);
+    virtual string output() = 0;
+  protected:
+    vector<string> tokens;
 };
 
 class LineOutputStrategy : public OutputStrategy {
   public:
-    virtual string output(vector<string> tokens);
+    virtual string output();
 };
 
-vector<string> getTokens(string str);
-string         getOutput(vector<string> tokens, OutputStrategy* os);
+string getOutput(string str, OutputStrategy* os);
 
 #endif // SPLIT_STR_3_LIB_H

@@ -3,9 +3,8 @@
 #include <iostream>
 
 int main() {
-  string         input  = " separation  of concerns is a sound strategy for software development ";
-  vector<string> tokens = getTokens(input);
+  string input  = " separation  of concerns is a sound strategy for software development ";
   LineOutputStrategy los;
-  string         output = getOutput(tokens, &los);
+  string output = getOutput(input, &los);
   cout << output;
 }

@@ -1,7 +1,6 @@
 #include "split_str_1_lib.h"
 
 string getOutput(string str) {
-  vector<string> tokens;
   string tmp;
   string output;
 

@@ -1,0 +1,27 @@
+cc_binary(
+    name = "split_str_1",
+    srcs = ["split_str_1.cpp"],
+)
+
+cc_library(
+    name = "split_str_2_lib",
+    srcs = ["split_str_2_lib.cpp"],
+    hdrs = ["split_str_2_lib.h"],
+)
+
+cc_binary(
+    name = "split_str_2",
+    srcs = ["split_str_2.cpp"],
+    deps = [":split_str_2_lib"],
+)
+
+cc_test(
+    name = "split_str_2_test",
+    size = "small",
+    srcs = ["split_str_2_test.cpp"],
+    deps = [
+    	":split_str_2_lib",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)

@@ -16,11 +16,11 @@ vector<string> getTokens(string str) {
   return tokens;
 }
 
-string getOutput(vector<string> tokens, OutputStrategy os) {
-  return os.output(tokens);
+string getOutput(vector<string> tokens, OutputStrategy* os) {
+  return os->output(tokens);
 }
 
-string OutputStrategy::output(vector<string> tokens) {
+string LineOutputStrategy::output(vector<string> tokens) {
   string out;
   for (auto token : tokens) {
     out.append(token);

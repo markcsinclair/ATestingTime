@@ -22,6 +22,18 @@ cc_binary(
     deps = [":split_str_2_lib"],
 )
 
+cc_library(
+    name = "split_str_3_lib",
+    srcs = ["split_str_3_lib.cpp"],
+    hdrs = ["split_str_3_lib.h"],
+)
+
+cc_binary(
+    name = "split_str_3",
+    srcs = ["split_str_3.cpp"],
+    deps = [":split_str_3_lib"],
+)
+
 cc_test(
     name = "split_str_1_test",
     size = "small",

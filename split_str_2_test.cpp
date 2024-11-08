@@ -2,7 +2,6 @@
 
 #include "split_str_2_lib.h"
 
-
 TEST(SplitStr2Test, GetTokensSingleWord) {
   string str("hello");
   vector<string> tokens   = getTokens(str);

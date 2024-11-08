@@ -23,6 +23,17 @@ cc_binary(
 )
 
 cc_test(
+    name = "split_str_1_test",
+    size = "small",
+    srcs = ["split_str_1_test.cpp"],
+    deps = [
+    	":split_str_1_lib",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
     name = "split_str_2_test",
     size = "small",
     srcs = ["split_str_2_test.cpp"],

@@ -55,3 +55,14 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "split_str_3_test",
+    size = "small",
+    srcs = ["split_str_3_test.cpp"],
+    deps = [
+    	":split_str_3_lib",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)

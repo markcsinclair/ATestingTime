@@ -34,6 +34,19 @@ cc_binary(
     deps = [":split_str_3_lib"],
 )
 
+cc_binary(
+    name = "split_str_4",
+    srcs = ["split_str_4.cpp"],
+    deps = [":split_str_4_lib"],
+)
+
+cc_library(
+    name = "split_str_4_lib",
+    srcs = ["split_str_4_lib.cpp"],
+    hdrs = ["split_str_4_lib.h"],
+)
+
+
 cc_test(
     name = "split_str_1_test",
     size = "small",
@@ -66,3 +79,15 @@ cc_test(
         "@googletest//:gtest_main",
     ],
 )
+
+cc_test(
+    name = "split_str_4_test",
+    size = "small",
+    srcs = ["split_str_4_test.cpp"],
+    deps = [
+    	":split_str_4_lib",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
